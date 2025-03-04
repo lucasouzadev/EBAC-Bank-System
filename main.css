@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-image: linear-gradient(to top, #ffffff, #b6b5b5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    margin: 80px auto;
+    max-width: 640px;
+    width: 100%;
+}
+
+form {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #eaeaea90;
+}
+
+form input:focus, form textarea:focus {
+    outline-color: #ff9c9ccc;
+}
+
+input, textarea, button {
+    display: block;
+    padding: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+    resize: none;
+}
+
+button {
+    background-color: #cc2e2e;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    font-style: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ae2727;
+}
+
+#mensagem-Sucesso {
+    background-color: #b6ff9c;
+    color: #000000;
+    padding: 16px;
+    display: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+#nome-beneficiario-error, #numero-conta-error, #valor-error {
+    background-color: #ff9c9c;
+    color: #000000;
+    padding: 8px;
+    margin-bottom: 8px;
+    font-size: 12px;
+    display: none;
+}
+
+#ok-button {
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    font-style: bold;
+    cursor: pointer;
+}
+
+.input-error {
+    color: #ff0000;
+    border: 1px solid #ff0000;
+    outline-color: #ff0000;
+}
+
+.input-success {
+    border: 1px solid rgba(174, 255, 163, 0.8);;
+    outline-color: rgba(174, 255, 163, 0.8);
+}
