@@ -1,27 +1,42 @@
 # EBAC Banking
 
-Sistema bancário simples, desenvolvido como parte do curso de Full Stack Java na EBAC. O objetivo deste projeto é permitir que os usuários realizem depósitos em uma conta bancária.
+EBAC Banking é um sistema bancário web simples, desenvolvido como parte do curso de Full Stack Java da EBAC. O objetivo do projeto é simular a realização de depósitos bancários, aplicando conceitos fundamentais de desenvolvimento web, validação de formulários e integração com serviços externos.
 
-## Tecnologias Utilizadas
+## Tecnologias Aplicadas
 
-- HTML
-- CSS
-- JavaScript
+- **HTML5**: Estruturação da página e do formulário de depósito.
+- **CSS3**: Estilização responsiva e moderna da interface.
+- **JavaScript (ES6+)**: Manipulação do DOM, validação de dados, feedback ao usuário e integração com EmailJS.
+- **EmailJS**: Serviço externo utilizado para envio automático de emails de confirmação de depósito.
+
+## O que foi aplicado no projeto
+
+- **Validação de Formulário**: 
+  - Verificação do nome completo do beneficiário (mínimo dois nomes).
+  - Validação de email no formato correto.
+  - Checagem de campos obrigatórios (nome, email, número da conta, valor).
+  - Limite de caracteres para o campo de descrição.
+  - Exibição de mensagens de erro dinâmicas e feedback visual nos campos.
+
+- **Feedback ao Usuário**:
+  - Mensagem de sucesso personalizada após depósito, exibindo todos os dados preenchidos.
+  - Botão para limpar o formulário e ocultar a mensagem de sucesso.
+
+- **Envio de Email Automático**:
+  - Integração com o EmailJS para envio de email de confirmação para o beneficiário, contendo todos os detalhes do depósito.
+  - Template de email customizado com informações do depósito, data/hora e email do beneficiário.
+
+- **Boas Práticas de Código**:
+  - Separação de responsabilidades entre HTML, CSS e JavaScript.
+  - Uso de funções para validação e manipulação do formulário.
+  - Tratamento de erros e mensagens claras para o usuário.
 
 ## Estrutura do Projeto
 
-O projeto é composto pelos seguintes arquivos:
-
-- `index.html`: A página principal que contém o formulário para depósitos.
-- `main.css`: O arquivo de estilo que define a aparência da aplicação.
-- `main.js`: O arquivo JavaScript que contém a lógica para manipulação do formulário e validação dos dados.
-
-## Funcionalidades
-
-- Formulário para inserir o nome do beneficiário, número da conta e valor do depósito.
-- Validação de campos obrigatórios com mensagens de erro.
-- Campo de descrição opcional para o depósito.
-- Mensagem de sucesso após a realização do depósito.
+- `index.html`: Página principal com o formulário de depósito.
+- `main.css`: Estilos visuais da aplicação.
+- `main.js`: Lógica de validação, manipulação do formulário e integração com EmailJS.
+- `email_template.html`: Template customizado para o email de confirmação enviado ao beneficiário.
 
 ## Como Usar
 
@@ -30,19 +45,21 @@ O projeto é composto pelos seguintes arquivos:
    git clone https://github.com/seu-usuario/ebac-banking.git
    ```
 
-2. Navegue até o diretório do projeto:
+2. Acesse o diretório do projeto:
    ```bash
    cd ebac-banking
    ```
 
-3. Abra o arquivo `index.html` em um navegador da sua escolha.
+3. Abra o arquivo `index.html` em seu navegador preferido.
 
-4. Preencha o formulário e clique no botão "Depositar" para realizar um depósito.
+4. Preencha o formulário com os dados do depósito e clique em "Depositar".
+
+5. O beneficiário receberá um email automático de confirmação, caso o EmailJS esteja corretamente configurado.
 
 ## Contribuições
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
+Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request com melhorias, correções ou novas funcionalidades.
 
 ## Licença
 
-Este projeto está licenciado sob a MIT License - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto está licenciado sob a MIT License. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
