@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Confirmação de Depósito!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f6f9fc;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #2e86de;
+      text-align: center;
+    }
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin: 32px 0;
+    }
+    .logo-img {
+      display: block;
+      max-width: 220px;
+      width: 100%;
+      height: auto;
+    }
+    p {
+      font-size: 15px;
+      color: #333333;
+      line-height: 1.6;
+    }
+    .info {
+      background: #f1f9ff;
+      padding: 12px;
+      border-radius: 6px;
+      margin: 15px 0;
+    }
+    .footer {
+      margin-top: 25px;
+      font-size: 12px;
+      color: #777777;
+      text-align: center;
+    }
+    @media (max-width: 250px) {
+      .container {
+        max-width: 98vw;
+        padding: 10px;
+      }
+      .logo-img {
+        max-width: 90vw;
+      }
+      .info {
+        font-size: 14px;
+        padding: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo-container">
+      <img class="logo-img" src="https://banco-de-imagens-web.vercel.app/imagens/EBAC_Banking.png" alt="Logo do banco">
+    </div>
+
+    <p>Olá <b>{{to_name}}</b>,</p>
+    <p>Seu depósito foi realizado com sucesso. Confira os detalhes abaixo:</p>
+
+    <div class="info">
+      <p><b>Valor:</b> R$ {{valor}}</p>
+      <p><b>Número da conta:</b> {{conta}}</p>
+      <p><b>Descrição:</b> {{descricao}}</p>
+      <p><b>Data e hora:</b> {{data_hora}}</p>
+      <p><b>Email do beneficiário:</b> {{email_cliente}}</p>
+    </div>
+
+    <p>Caso não reconheça esta operação, entre em contato com nosso suporte imediatamente.</p>
+
+    <div class="footer">
+      <p>Este é um email automático, por favor não responda.</p>
+      <p>&copy; 2025 Ebac Banking. Todos os direitos reservados.</p>
+    </div>
+  </div>
+</body>
+</html>
