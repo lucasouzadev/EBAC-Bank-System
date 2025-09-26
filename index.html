@@ -22,21 +22,34 @@
 
             <input type="text" id="nome-beneficiario" required placeholder="Nome completo do beneficiário" />
             <p id="nome-beneficiario-error" style="display:none;">Por favor, informe o nome completo do beneficiário.</p>
-
+          
+            <input type="email" id="email-cliente" required placeholder="Email do beneficiário" />
+            <p id="email-cliente-error" style="display:none;">Por favor, informe um email válido.</p>
+          
             <input type="number" id="numero-conta" required placeholder="Número da conta" />
             <p id="numero-conta-error" style="display:none;">Por favor, informe o número da conta.</p>
-
+          
             <input type="number" id="valor" required placeholder="Valor" />
             <p id="valor-error" style="display:none;">Por favor, informe um valor de depósito.</p>
-
+          
             <textarea id="descricao" placeholder="Descrição (opcional)"></textarea>
             <button id="depositar" type="submit">Depositar</button>
-
-        </form>
+          
+          </form>          
 
         <p id="mensagem-Sucesso"></p>
 
     </div>
     <script src="./main.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+            publicKey: "fZGdWbpDFqBeVA2sS",
+        });
+    })();
+</script>
 </body>
 </html>
